@@ -25,6 +25,8 @@ permissions:
 
 jobs:
   release-please:
+    # Upstream GitHub App + RELEASE_APP_PRIVATE_KEY only on caura-ai/caura.
+    if: github.repository == 'caura-ai/caura'
     runs-on: ubuntu-latest
     environment: release-please
     steps:
